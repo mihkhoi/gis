@@ -1,0 +1,67 @@
+{% load static %}
+<header id="header" class="header-area">
+  <div class="container custom-container">
+    <nav class="menu-area d-flex align-items-center">
+      <div class="logo">
+        <a href="index.html">
+          <img src="{% static 'assets/img/logo/logo.png' %}" alt="logo" />
+        </a>
+      </div>
+      <ul class="main-menu d-flex align-items-center">
+        <li class="active"><a href="/">Trang chủ</a></li>
+        <li>
+          <a href="{javascript:void(0)}">Bản đồ</a>
+          <ul class="sub-menu">
+            <li><a href="{% url 'maps:co-ban' %}">Cơ bản</a></li>
+            <li><a href="{% url 'maps:tim-kiem' %}">Tìm kiếm</a></li>
+            <li><a href="{% url 'maps:duong_di' %}">Duong di</a></li>
+            <li><a href="/ECU-ban/">ECU bản</a></li>
+          </ul>
+        </li>
+        <li><a href="/gioi-thieu/">Giới thiệu</a></li>
+      </ul>
+      <div class="right-content ml-auto">
+        <div class="search-bar">
+          <img
+            src="{% static 'assets/img/logo/search.svg' %}"
+            alt="search logo"
+          />
+        </div>
+        <div class="hamburger-menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  
+
+<aside>
+  <div class="sidebar-menu">
+    <div class="close-sidebar"><span></span><span></span></div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="{% static 'assets/img/logo/logo.png' %}" alt="logo" />
+      </a>
+    </div>
+    <form class="asidesearch-bar">
+      <input type="text" name="search" />
+      <img src="{% static 'assets/img/logo/search.svg' %}" alt="search logo" />
+    </form>
+  </div>
+  <div class="overlay"></div>
+</aside>
+
+<div class="search-box">
+  <div class="search-form">
+    <form action="#">
+      <input type="text" placeholder="Enter Your Keyword" />
+    <button type="submit">
+      <img src="{% static 'assets/img/logo/search.svg' %}" alt="search logo" />
+    </button>
+</form>
+  </div>
+  <a class="search-close" href="javascript:void(0)">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
+</div>
+</header>

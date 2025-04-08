@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Hiển thị đường đi{% endblock %}
+
+{% block map %}
+<!-- Leaflet -->
+<link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" />
+<script src="{% static 'leaflet/leaflet.js' %}"></script>
+
+<!-- Routing Machine -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+/>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<!-- Geocoder -->
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h3 class="text-center">Chọn hai điểm để hiển thị đường đi</h3>
+  <div id="map" style="height: 600px;"></div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/map/duong_di.js' %}"></script>
+{% endblock %}
